@@ -1,5 +1,6 @@
 package mao.order_service.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import mao.feign.entity.User;
 import mao.feign.feign.UserClient;
 import mao.order_service.entity.Order;
@@ -63,6 +64,7 @@ public class OrderService
      *
      * @return goods
      */
+    @SentinelResource("goods")
     public String queryGoods()
     {
         return "goods";

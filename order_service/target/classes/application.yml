@@ -40,6 +40,8 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8099
+      # 关闭context整合
+      web-context-unify: false
 
 
 

@@ -69,7 +69,7 @@ public class OrderController
      *
      * @return save
      */
-    @GetMapping("/order/save")
+    @GetMapping("/save")
     public String save()
     {
         return "save" + orderService.queryGoods();
