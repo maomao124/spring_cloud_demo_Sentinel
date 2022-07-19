@@ -112,7 +112,7 @@ feign:
       # default是全局配置，如果是写服务名称，则是针对某个微服务的配置
       default:
          #日志级别，包含四种不同的级别：NONE、BASIC、HEADERS、FULL
-        loggerLevel: FULL
+        loggerLevel: BASIC
         # 连接超时时间
         #connectTimeout:
         # 响应结果的解析器，http远程调用的结果做解析，例如解析json字符串为java对象

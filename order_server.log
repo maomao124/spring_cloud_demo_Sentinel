@@ -856,3 +856,226 @@ feign.FeignException$BadRequest: [400 ] during [GET] to [http://userservice/user
 2022-07-19 15:29:16.336 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] 
 2022-07-19 15:29:16.336 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
 2022-07-19 15:29:16.336 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:19.064  WARN 21204 --- [http-nio-8081-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 422736
+2022-07-19 15:36:19.082 DEBUG 21204 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:19.083 DEBUG 21204 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:19.084 DEBUG 21204 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:19.084 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:19.084 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (24ms)
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:19 GMT
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:19.109 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:19.110 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:19.110 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:19.110 DEBUG 21204 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:19.530 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:19.530 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:19.532 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:19.532 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:19.532 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:19.536 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:19.536 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:19.536 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:19 GMT
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:19.537 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:19.755 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:19.755 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:19.756 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:19.757 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:19.757 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:19 GMT
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:19.761 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:19.954 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:19.955 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:19.956 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:19.956 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:19.956 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:19.960 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-19 15:36:19.960 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:19.960 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:19.960 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:19 GMT
+2022-07-19 15:36:19.961 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:19.961 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:19.961 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:19.961 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:19.961 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:20.117 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:20.117 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:20.118 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:20.119 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:20.119 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:20 GMT
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:20.123 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:20.286 DEBUG 21204 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:20.287 DEBUG 21204 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:20.288 DEBUG 21204 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:20.288 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:20.288 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:20.292 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:20.292 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:20.292 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:20 GMT
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:20.293 DEBUG 21204 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:20.455 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:20.456 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:20.458 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:20.459 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:20.459 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:20.464 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-19 15:36:20.464 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:20.464 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:20.464 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:20 GMT
+2022-07-19 15:36:20.465 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:20.465 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:20.465 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:20.465 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:20.465 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.075 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.076 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.077 DEBUG 21204 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.077 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.077 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.082 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.083 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.083 DEBUG 21204 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.253 DEBUG 21204 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.254 DEBUG 21204 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.255 DEBUG 21204 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.255 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.255 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.259 DEBUG 21204 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.414 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.414 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.415 DEBUG 21204 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.415 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.415 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.420 DEBUG 21204 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.584 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.585 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.586 DEBUG 21204 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.586 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.586 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.590 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.591 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.591 DEBUG 21204 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.738 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.738 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.739 DEBUG 21204 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.739 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.739 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.743 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:23.743 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.743 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.743 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.744 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.744 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.744 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.744 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.744 DEBUG 21204 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:23.905 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:23.905 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:23.906 DEBUG 21204 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:23.907 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:23.907 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (5ms)
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:23.913 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:23.914 DEBUG 21204 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:24.048 DEBUG 21204 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:24.048 DEBUG 21204 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:24.050 DEBUG 21204 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:24.050 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:24.050 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:23 GMT
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:24.054 DEBUG 21204 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:36:24.188 DEBUG 21204 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-19 15:36:24.188 DEBUG 21204 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-19 15:36:24.189 DEBUG 21204 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-19 15:36:24.189 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-19 15:36:24.189 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] date: Tue, 19 Jul 2022 07:36:24 GMT
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-19 15:36:24.193 DEBUG 21204 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-19 15:43:46.563  WARN 21204 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-19 15:43:46.563  INFO 21204 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-19 15:43:46.563  WARN 21204 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-19 15:43:46.563  WARN 21204 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-19 15:43:46.563  WARN 21204 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-19 15:43:46.588  INFO 21204 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-19 15:43:46.589  INFO 21204 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-19 15:43:46.591  INFO 21204 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-19 15:43:52.611  WARN 21204 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-19 15:43:52.612  INFO 21204 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 15:43:52.624  INFO 21204 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-19 15:43:52.626  INFO 21204 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
