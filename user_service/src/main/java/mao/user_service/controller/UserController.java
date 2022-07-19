@@ -36,7 +36,7 @@ public class UserController
      * @return User
      */
     @GetMapping("/{id}")
-    public User queryById(@PathVariable("id") Long id, @RequestHeader("key1") String key1)
+    public User queryById(@PathVariable("id") Long id, @RequestHeader(name = "key1",required = false) String key1)
     {
         //log.debug("user被访问了："+id);
         log.info("请求头key1：" + key1);

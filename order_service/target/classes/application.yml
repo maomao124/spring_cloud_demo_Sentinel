@@ -35,6 +35,14 @@ spring:
         # 是否为临时实例，true为临时实例
         ephemeral: false
 
+
+
+    sentinel:
+      transport:
+        dashboard: localhost:8099
+
+
+
 # 负载均衡
 #userservice:
 #  ribbon:
