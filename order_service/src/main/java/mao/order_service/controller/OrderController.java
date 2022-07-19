@@ -31,6 +31,7 @@ public class OrderController
 
     /**
      * 获取订单数据
+     *
      * @param orderId 订单的id
      * @return Order
      */
@@ -38,5 +39,17 @@ public class OrderController
     public Order queryOrderByUserId(@PathVariable("orderId") Long orderId)
     {
         return orderService.queryOrderById(orderId);
+    }
+
+    @GetMapping("/query")
+    public String query()
+    {
+        return "query";
+    }
+
+    @GetMapping("/update")
+    public String update()
+    {
+        return "update";
     }
 }

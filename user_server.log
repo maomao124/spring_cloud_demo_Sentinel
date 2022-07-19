@@ -3130,3 +3130,193 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 2022-07-19 15:43:53.002  INFO 16116 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-19 15:43:53.003  INFO 16116 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-07-19 15:43:53.005  INFO 16116 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-19 19:47:54.150  WARN 19288 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[userservice] & group[DEFAULT_GROUP]
+2022-07-19 19:47:54.185  INFO 19288 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-userservice-dev.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-userservice.yml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-userservice,DEFAULT_GROUP'}]
+2022-07-19 19:47:54.224  INFO 19288 --- [main] mao.user_service.UserServiceApplication  : The following profiles are active: dev
+2022-07-19 19:47:54.672  INFO 19288 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd649085-a05d-328d-98bd-abc6b15d3551
+2022-07-19 19:47:54.869  INFO 19288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-19 19:47:54.876  INFO 19288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-19 19:47:54.876  INFO 19288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-19 19:47:54.977  INFO 19288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-19 19:47:54.977  INFO 19288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 743 ms
+2022-07-19 19:47:55.076  INFO 19288 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-19 19:47:55.170  INFO 19288 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-19 19:47:55.223  WARN 19288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-19 19:47:55.223  INFO 19288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-19 19:47:55.225  WARN 19288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-19 19:47:55.226  INFO 19288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-19 19:47:55.329  INFO 19288 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 19:47:55.534  INFO 19288 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-19 19:47:55.793  INFO 19288 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-07-19 19:47:55.793  INFO 19288 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-07-19 19:47:55.793  INFO 19288 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-07-19 19:47:55.897  INFO 19288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-19 19:47:55.901  INFO 19288 --- [main] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8082, ip='192.168.202.1', weight=1.0, serviceName='DEFAULT_GROUP@@userservice', cluster='HZ', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-07-19 19:47:55.902  INFO 19288 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@userservice with instance: Instance{instanceId='null', ip='192.168.202.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HZ', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-07-19 19:47:55.908  INFO 19288 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP userservice 192.168.202.1:8082 register finished
+2022-07-19 19:47:56.009  INFO 19288 --- [main] mao.user_service.UserServiceApplication  : Started UserServiceApplication in 2.809 seconds (JVM running for 3.473)
+2022-07-19 19:47:56.012  INFO 19288 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] userservice+DEFAULT_GROUP
+2022-07-19 19:47:56.013  INFO 19288 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=userservice, group=DEFAULT_GROUP, cnt=1
+2022-07-19 19:47:56.018  INFO 19288 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] userservice-dev.yml+DEFAULT_GROUP
+2022-07-19 19:47:56.018  INFO 19288 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=userservice-dev.yml, group=DEFAULT_GROUP, cnt=1
+2022-07-19 19:47:56.023  INFO 19288 --- [main] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] userservice.yml+DEFAULT_GROUP
+2022-07-19 19:47:56.023  INFO 19288 --- [main] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=userservice.yml, group=DEFAULT_GROUP, cnt=1
+2022-07-19 19:47:56.890  INFO 19288 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@userservice@@HZ -> [{"instanceId":"192.168.202.1#8082#HZ#DEFAULT_GROUP@@userservice","ip":"192.168.202.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HZ","serviceName":"DEFAULT_GROUP@@userservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-07-19 19:47:56.900  INFO 19288 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@userservice@@HZ -> [{"instanceId":"192.168.202.1#8082#HZ#DEFAULT_GROUP@@userservice","ip":"192.168.202.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HZ","serviceName":"DEFAULT_GROUP@@userservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-07-19 19:47:56.925  INFO 19288 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.202.1\",\"port\":8082,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.202.1#8082#HZ#DEFAULT_GROUP@@userservice\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HZ\",\"serviceName\":\"DEFAULT_GROUP@@userservice\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@userservice\",\"name\":\"DEFAULT_GROUP@@userservice\",\"cacheMillis\":10000,\"lastRefTime\":1658231276923,\"checksum\":\"893e42166ce00e13b64fddd90f4b07c5\",\"useSpecifiedURL\":false,\"clusters\":\"HZ\",\"env\":\"\",\"metadata\":{}}","lastRefTime":934684022800} from /192.168.202.1
+2022-07-19 19:48:42.438  INFO 19288 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-19 19:48:42.438  INFO 19288 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-19 19:48:42.442  INFO 19288 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-19 19:48:42.462  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:48:44.427  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:01.531  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:01.869  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:02.115  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:46.738  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:46.873  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:47.019  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:47.171  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:47.324  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:47.477  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:47.867  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.025  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.203  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.373  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.536  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.678  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:49:48.827  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：value1
+2022-07-19 19:50:46.026  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:01.421  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:16.144  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:56.602  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:56.927  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:57.163  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:57.307  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:57.468  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:57.638  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 19:51:57.784  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.049  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.050  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.052  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.053  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.063  WARN 19288 --- [http-nio-8082-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 626266
+2022-07-19 20:02:24.079  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.125  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.125  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.128  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.128  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:02:24.131  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.683  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.684  WARN 19288 --- [http-nio-8082-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 143550
+2022-07-19 20:04:47.685  WARN 19288 --- [http-nio-8082-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 143555
+2022-07-19 20:04:47.711  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.714  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.721  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.723  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.734  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.763  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.770  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.777  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:47.812  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.513  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.523  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.531  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.563  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.571  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.580  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.611  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.620  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:04:48.627  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:23.794  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:23.795  WARN 19288 --- [http-nio-8082-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 95165
+2022-07-19 20:06:23.834  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:23.881  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:23.928  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:23.970  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.021  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.071  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.122  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.173  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.223  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.522  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.572  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.623  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.673  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:06:24.723  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.858  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.859  WARN 19288 --- [http-nio-8082-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 106134
+2022-07-19 20:08:10.882  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.888  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.892  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.899  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.907  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.938  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.944  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:10.951  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.000  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.539  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.547  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.554  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.588  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.594  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.602  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.641  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.649  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.655  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:08:11.688  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:43.807  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:43.808  WARN 19288 --- [http-nio-8082-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 152119
+2022-07-19 20:10:43.831  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:43.838  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:43.844  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:43.850  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.041  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.049  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.054  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.061  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.068  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.537  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.545  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.552  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.558  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:44.564  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.037  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.044  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.051  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.057  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.063  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.539  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.546  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.553  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.558  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:45.564  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.038  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.047  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.054  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.061  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.066  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.538  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.546  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.554  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.560  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:46.566  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.038  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.047  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.053  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.058  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.064  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.537  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.544  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.551  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.557  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:47.562  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.036  INFO 19288 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.042  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.049  INFO 19288 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.055  INFO 19288 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.061  INFO 19288 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.539  INFO 19288 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.548  INFO 19288 --- [http-nio-8082-exec-6] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.555  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.567  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:10:48.575  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
