@@ -57,4 +57,14 @@ public class OrderService
         //返回数据
         return order;
     }
+
+    /**
+     * 模拟查询商品业务
+     *
+     * @return goods
+     */
+    public String queryGoods()
+    {
+        return "goods";
+    }
 }

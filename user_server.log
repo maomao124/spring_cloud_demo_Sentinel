@@ -3320,3 +3320,5 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 2022-07-19 20:10:48.555  INFO 19288 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
 2022-07-19 20:10:48.567  INFO 19288 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
 2022-07-19 20:10:48.575  INFO 19288 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:24:57.975  INFO 19288 --- [http-nio-8082-exec-2] m.u.controller.UserController            : 请求头key1：null
+2022-07-19 20:24:57.976  WARN 19288 --- [http-nio-8082-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 849399

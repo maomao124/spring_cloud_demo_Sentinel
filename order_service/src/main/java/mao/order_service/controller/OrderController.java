@@ -41,15 +41,37 @@ public class OrderController
         return orderService.queryOrderById(orderId);
     }
 
+    /**
+     * 模拟查询订单
+     *
+     * @return query
+     */
     @GetMapping("/query")
     public String query()
     {
-        return "query";
+        //return "query";
+        return "query" + orderService.queryGoods();
     }
 
+    /**
+     * 模拟
+     *
+     * @return update
+     */
     @GetMapping("/update")
     public String update()
     {
         return "update";
+    }
+
+    /**
+     * 模拟创建订单
+     *
+     * @return save
+     */
+    @GetMapping("/order/save")
+    public String save()
+    {
+        return "save" + orderService.queryGoods();
     }
 }
