@@ -1,0 +1,5 @@
+mao\user_service\controller\UserController.class
+mao\user_service\entity\User.class
+mao\user_service\mapper\UserMapper.class
+mao\user_service\UserServiceApplication.class
+mao\user_service\service\UserService.class

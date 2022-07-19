@@ -1,0 +1,13 @@
+2022-07-09 14:23:03.680  INFO 15136 --- [main] m.o.service.OrderServiceTest             : Starting OrderServiceTest on mao with PID 15136 (started by mao in H:\程序\大三暑假\spring_cloud_demo\order_service)
+2022-07-09 14:23:03.681 DEBUG 15136 --- [main] m.o.service.OrderServiceTest             : Running with Spring Boot v2.3.9.RELEASE, Spring v5.2.13.RELEASE
+2022-07-09 14:23:03.681  INFO 15136 --- [main] m.o.service.OrderServiceTest             : No active profile set, falling back to default profiles: default
+2022-07-09 14:23:04.671  INFO 15136 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-09 14:23:04.904  INFO 15136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-09 14:23:05.564  INFO 15136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 14:23:06.078  INFO 15136 --- [main] m.o.service.OrderServiceTest             : Started OrderServiceTest in 2.747 seconds (JVM running for 3.637)
+2022-07-09 14:23:06.999 DEBUG 15136 --- [main] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-09 14:23:07.041 DEBUG 15136 --- [main] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-09 14:23:07.098 DEBUG 15136 --- [main] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-09 14:23:07.125  INFO 15136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-09 14:23:07.125  INFO 15136 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-09 14:23:07.130  INFO 15136 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

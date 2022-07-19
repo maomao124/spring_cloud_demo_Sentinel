@@ -1,0 +1,23 @@
+2022-07-09 14:22:02.781  INFO 13836 --- [main] m.user_service.service.UserServiceTest   : Starting UserServiceTest on mao with PID 13836 (started by mao in H:\程序\大三暑假\spring_cloud_demo\user_service)
+2022-07-09 14:22:02.783 DEBUG 13836 --- [main] m.user_service.service.UserServiceTest   : Running with Spring Boot v2.3.9.RELEASE, Spring v5.2.13.RELEASE
+2022-07-09 14:22:02.783  INFO 13836 --- [main] m.user_service.service.UserServiceTest   : No active profile set, falling back to default profiles: default
+2022-07-09 14:22:03.767  INFO 13836 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-09 14:22:03.963  INFO 13836 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-09 14:22:04.443  INFO 13836 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 14:22:04.910  INFO 13836 --- [main] m.user_service.service.UserServiceTest   : Started UserServiceTest in 2.462 seconds (JVM running for 3.33)
+2022-07-09 14:22:05.829 DEBUG 13836 --- [main] m.u.mapper.UserMapper.findById           : ==>  Preparing: select * from tb_user where id = ?
+2022-07-09 14:22:05.869 DEBUG 13836 --- [main] m.u.mapper.UserMapper.findById           : ==> Parameters: 1(Long)
+2022-07-09 14:22:05.907 DEBUG 13836 --- [main] m.u.mapper.UserMapper.findById           : <==      Total: 1
+2022-07-09 14:22:05.934  INFO 13836 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-09 14:22:05.935  INFO 13836 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-09 14:22:05.941  INFO 13836 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-09 20:00:58.247  INFO 18416 --- [main] m.u.UserServiceApplicationTests          : Starting UserServiceApplicationTests on mao with PID 18416 (started by mao in H:\程序\大三暑假\spring_cloud_demo实现微服务远程调用\user_service)
+2022-07-09 20:00:58.248 DEBUG 18416 --- [main] m.u.UserServiceApplicationTests          : Running with Spring Boot v2.3.9.RELEASE, Spring v5.2.13.RELEASE
+2022-07-09 20:00:58.249  INFO 18416 --- [main] m.u.UserServiceApplicationTests          : No active profile set, falling back to default profiles: default
+2022-07-09 20:00:59.260  INFO 18416 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-09 20:00:59.506  INFO 18416 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-09 20:01:00.170  INFO 18416 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 20:01:00.660  INFO 18416 --- [main] m.u.UserServiceApplicationTests          : Started UserServiceApplicationTests in 2.75 seconds (JVM running for 3.77)
+2022-07-09 20:01:01.174  INFO 18416 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-09 20:01:01.175  INFO 18416 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-09 20:01:01.177  INFO 18416 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

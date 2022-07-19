@@ -1,0 +1,95 @@
+# gateway 网关配置文件
+
+spring:
+  application:
+    name: gateway
+
+
+  cloud:
+    nacos:
+        discovery:
+          # nacos 服务端地址
+          server-addr: localhost:8848
+          # 配置集群名称，也就是机房位置
+          # cluster-name: HZ
+          # namespace: 5544c4b1-2899-4915-94af-f9940c01c2b9
+          # 是否为临时实例，true为临时实例
+          ephemeral: false
+
+    # 网关配置
+    gateway:
+      # 网关路由配置，list集合
+      routes:
+          # 路由的id，唯一
+        - id: user-service
+          # 路由的目标地址 lb就是负载均衡，后面跟服务名称
+          uri: lb://userservice
+          # 路由断言，也就是判断请求是否符合路由规则的条件，list集合
+          predicates:
+              # 按照路径匹配，只要以/user开头就符合要求
+            - Path=/user/**
+          # 路由过滤器，list集合
+          filters:
+              # 添加请求头
+            #- AddRequestHeader=key1,value1
+
+      # 默认过滤器，会对所有的路由请求都生效，list集合
+      default-filters:
+        # 添加请求头
+        - AddRequestHeader=key1,value1
+
+
+      # 全局的跨域处理
+      globalcors:
+        # 解决options请求被拦截问题
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            # 允许哪些网站的跨域请求
+            allowedOrigins:
+              - "http://localhost:8080"
+              - "http://localhost:8082"
+              - "http://localhost:8093"
+            # 允许的跨域ajax的请求方式
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            # 允许在请求中携带的头信息
+            allowedHeaders: "*"
+            # 是否允许携带cookie
+            allowCredentials: true
+            # 这次跨域检测的有效期
+            maxAge: 30000
+
+
+
+
+
+
+
+server:
+  port: 10010
+
+
+
+# 设置日志级别，root表示根节点，即整体应用日志级别
+logging:
+  # 日志输出到文件的文件名
+  file:
+    name: gateway.log
+  # 设置日志组
+  group:
+    # 自定义组名，设置当前组中所包含的包
+    mao_pro: mao
+  level:
+    root: info
+    # 为对应组设置日志级别
+    mao_pro: debug
+    # 日志输出格式
+  # pattern:
+  # console: "%d %clr(%p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+
+

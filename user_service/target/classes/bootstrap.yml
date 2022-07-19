@@ -1,0 +1,23 @@
+# bootstrap 配置
+
+spring:
+
+  application:
+    name: userservice
+  # 配置环境
+  profiles:
+    active: dev
+
+
+
+  cloud:
+    nacos:
+      discovery:
+        # nacos 服务端地址
+        server-addr:  localhost:8848
+
+      config:
+        # 设置配置文件格式
+        file-extension: yml
+
+

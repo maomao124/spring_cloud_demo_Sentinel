@@ -1,0 +1,21 @@
+2022-07-17 22:06:49.443  INFO 5900 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-17 22:06:50.484  INFO 5900 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cc458cda-d83e-3934-b68b-61fecfa0aa54
+2022-07-17 22:06:50.914  INFO 5900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-17 22:06:50.931  INFO 5900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-17 22:06:50.932  INFO 5900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-17 22:06:50.999  INFO 5900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-17 22:06:51.000  INFO 5900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1518 ms
+2022-07-17 22:06:51.181  INFO 5900 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-17 22:06:51.421  INFO 5900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-17 22:06:52.286  WARN 5900 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-17 22:06:52.286  INFO 5900 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-17 22:06:52.295  WARN 5900 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-17 22:06:52.295  INFO 5900 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-17 22:06:52.474  INFO 5900 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-17 22:06:52.660  INFO 5900 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-17 22:06:53.187  INFO 5900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-17 22:06:53.199  INFO 5900 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-17 22:06:53.312  INFO 5900 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 5.165 seconds (JVM running for 5.716)
+2022-07-17 22:06:53.536  INFO 5900 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-17 22:06:53.553  INFO 5900 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-17 22:06:53.560  INFO 5900 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@6c42f2a1
