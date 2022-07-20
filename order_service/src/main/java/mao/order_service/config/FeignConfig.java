@@ -1,8 +1,9 @@
 package mao.order_service.config;
 
 
-
-
+import mao.feign.fallback.UserClientFallbackFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Project name(项目名称)：spring_cloud_demo_Feign
@@ -18,6 +19,7 @@ package mao.order_service.config;
  */
 
 
+@Configuration
 public class FeignConfig
 {
 //    @Bean
@@ -25,4 +27,10 @@ public class FeignConfig
 //    {
 //        return Logger.Level.FULL;
 //    }
+
+    @Bean
+    public UserClientFallbackFactory userClientFallbackFactory()
+    {
+        return new UserClientFallbackFactory();
+    }
 }

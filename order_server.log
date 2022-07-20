@@ -10,3 +10,589 @@
 2022-07-20 14:09:00.582  INFO 15396 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-20 14:09:00.603  INFO 15396 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-07-20 14:09:00.605  INFO 15396 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:24:03.017  INFO 7348 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:24:03.575  INFO 7348 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3fa83110-4156-3b03-80aa-f9b5949514d5
+2022-07-20 20:24:03.729  INFO 7348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:24:03.731  INFO 7348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:24:03.928  INFO 7348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:24:03.935  INFO 7348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:24:03.935  INFO 7348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:24:04.054  INFO 7348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:24:04.055  INFO 7348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1023 ms
+2022-07-20 20:24:04.154  INFO 7348 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:24:04.259  INFO 7348 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:24:04.620  WARN 7348 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+2022-07-20 20:24:04.623  INFO 7348 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:24:04.624  INFO 7348 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:24:04.624  INFO 7348 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-20 20:24:04.637  INFO 7348 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-20 20:24:04.647 ERROR 7348 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at mao.order_service.OrderServiceApplication.main(OrderServiceApplication.java:16) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:123) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:108) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-10.10.1.jar:na]
+	at feign.Feign$Builder.target(Feign.java:269) ~[feign-core-10.10.1.jar:na]
+	at org.springframework.cloud.openfeign.HystrixTargeter.target(HystrixTargeter.java:38) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.HystrixTargeter$$FastClassBySpringCGLIB$$b9e5b0c6.invoke(<generated>) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at com.alibaba.cloud.sentinel.feign.SentinelTargeterAspect.process(SentinelTargeterAspect.java:44) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.cloud.openfeign.HystrixTargeter$$EnhancerBySpringCGLIB$$31f4cb5d.target(<generated>) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:338) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:369) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:347) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:240) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1235) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 43 common frames omitted
+
+2022-07-20 20:26:00.962  INFO 14080 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:26:01.490  INFO 14080 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e5111f92-6d40-37f8-ad01-54790c051ef6
+2022-07-20 20:26:01.623  INFO 14080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:26:01.625  INFO 14080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:26:01.811  INFO 14080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:26:01.818  INFO 14080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:26:01.818  INFO 14080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:26:01.934  INFO 14080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:26:01.935  INFO 14080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
+2022-07-20 20:26:02.022  INFO 14080 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:26:02.111  INFO 14080 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:26:02.617  WARN 14080 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:26:02.617  INFO 14080 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:26:02.620  WARN 14080 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:26:02.620  INFO 14080 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:26:02.723  INFO 14080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:26:02.751  INFO 14080 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-20 20:26:02.822  INFO 14080 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:26:03.231  INFO 14080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-20 20:26:03.411  INFO 14080 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-20 20:26:03.542  INFO 14080 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.426 seconds (JVM running for 3.98)
+2022-07-20 20:26:03.643  INFO 14080 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-20 20:26:03.653  INFO 14080 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-20 20:26:03.661  INFO 14080 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@14af73e1
+2022-07-20 20:28:01.690  WARN 14080 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-20 20:28:01.690  WARN 14080 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-20 20:28:01.690  INFO 14080 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-20 20:28:01.690  WARN 14080 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-20 20:28:01.690  WARN 14080 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-20 20:28:01.714  INFO 14080 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:28:01.715  INFO 14080 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-20 20:28:01.721  INFO 14080 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-20 20:28:07.775  WARN 14080 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-20 20:28:07.775  INFO 14080 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:28:07.792  INFO 14080 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:28:07.792  INFO 14080 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:28:12.748  INFO 16420 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:28:13.266  INFO 16420 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7f2222f5-a3ab-303c-931c-b3aa353ea216
+2022-07-20 20:28:13.402  INFO 16420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:28:13.404  INFO 16420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:28:13.592  INFO 16420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:28:13.602  INFO 16420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:28:13.602  INFO 16420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:28:13.716  INFO 16420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:28:13.716  INFO 16420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2022-07-20 20:28:13.807  INFO 16420 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:28:13.902  INFO 16420 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:28:14.252  WARN 16420 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+2022-07-20 20:28:14.254  INFO 16420 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:28:14.255  INFO 16420 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:28:14.256  INFO 16420 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-20 20:28:14.268  INFO 16420 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-20 20:28:14.277 ERROR 16420 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at mao.order_service.OrderServiceApplication.main(OrderServiceApplication.java:16) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'userClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mao.feign.feign.UserClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: No fallbackFactory instance of type class mao.feign.fallback.UserClientFallbackFactory found for feign client userservice
+	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:123) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:108) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-10.10.1.jar:na]
+	at feign.Feign$Builder.target(Feign.java:269) ~[feign-core-10.10.1.jar:na]
+	at org.springframework.cloud.openfeign.HystrixTargeter.target(HystrixTargeter.java:38) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.HystrixTargeter$$FastClassBySpringCGLIB$$b9e5b0c6.invoke(<generated>) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at com.alibaba.cloud.sentinel.feign.SentinelTargeterAspect.process(SentinelTargeterAspect.java:44) ~[spring-cloud-starter-alibaba-sentinel-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.cloud.openfeign.HystrixTargeter$$EnhancerBySpringCGLIB$$21a3cbf4.target(<generated>) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:338) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:369) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:347) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:240) ~[spring-cloud-openfeign-core-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1235) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	... 43 common frames omitted
+
+2022-07-20 20:29:21.828  INFO 12256 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:29:22.318  INFO 12256 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df119b82-87f2-3bc0-a65b-342cefaa4335
+2022-07-20 20:29:22.453  INFO 12256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:29:22.455  INFO 12256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:29:22.643  INFO 12256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:29:22.650  INFO 12256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:29:22.650  INFO 12256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:29:22.761  INFO 12256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:29:22.761  INFO 12256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 918 ms
+2022-07-20 20:29:22.803  WARN 12256 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:29:22.803  INFO 12256 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:29:22.806  WARN 12256 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:29:22.806  INFO 12256 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:29:22.932  INFO 12256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:29:22.961  INFO 12256 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-20 20:29:23.149  INFO 12256 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:29:23.194  INFO 12256 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:29:23.280  INFO 12256 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:29:23.939  INFO 12256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-20 20:29:23.948  INFO 12256 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-20 20:29:24.074  INFO 12256 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.078 seconds (JVM running for 3.634)
+2022-07-20 20:29:24.155  INFO 12256 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: userservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-20 20:29:24.175  INFO 12256 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-20 20:29:24.186  INFO 12256 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-20 20:29:24.192  INFO 12256 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@2619cb76
+2022-07-20 20:30:31.427  INFO 12256 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-20 20:30:31.427  WARN 12256 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-20 20:30:31.427  WARN 12256 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-20 20:30:31.428  WARN 12256 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-20 20:30:31.428  WARN 12256 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-20 20:30:31.450  INFO 12256 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:30:31.453  INFO 12256 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:30:31.454  INFO 12256 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:30:31.462  INFO 12256 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-20 20:30:31.466  INFO 12256 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-20 20:30:37.533  WARN 12256 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-20 20:30:37.534  INFO 12256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:30:43.106  INFO 20768 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:30:43.598  INFO 20768 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e5111f92-6d40-37f8-ad01-54790c051ef6
+2022-07-20 20:30:43.737  INFO 20768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:30:43.739  INFO 20768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:30:43.920  INFO 20768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:30:43.927  INFO 20768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:30:43.927  INFO 20768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:30:44.044  INFO 20768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:30:44.045  INFO 20768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 925 ms
+2022-07-20 20:30:44.134  INFO 20768 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:30:44.223  INFO 20768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:30:44.720  WARN 20768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:30:44.720  INFO 20768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:30:44.722  WARN 20768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:30:44.723  INFO 20768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:30:44.822  INFO 20768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:30:44.848  INFO 20768 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-20 20:30:44.914  INFO 20768 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:30:45.303  INFO 20768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-20 20:30:45.312  INFO 20768 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-20 20:30:45.435  INFO 20768 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.171 seconds (JVM running for 3.759)
+2022-07-20 20:30:45.527  INFO 20768 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-20 20:30:45.538  INFO 20768 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-20 20:30:45.544  INFO 20768 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@73da303e
+2022-07-20 20:33:46.542  INFO 20768 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-20 20:33:46.543  WARN 20768 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-20 20:33:46.543  WARN 20768 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-20 20:33:46.543  WARN 20768 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-20 20:33:46.543  WARN 20768 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-20 20:33:46.567  INFO 20768 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:33:46.568  INFO 20768 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-20 20:33:46.573  INFO 20768 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-20 20:33:52.629  WARN 20768 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-20 20:33:52.630  INFO 20768 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:33:52.650  INFO 20768 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:33:52.651  INFO 20768 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:33:55.685  INFO 19840 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:33:56.177  INFO 19840 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e5111f92-6d40-37f8-ad01-54790c051ef6
+2022-07-20 20:33:56.313  INFO 19840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:33:56.315  INFO 19840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:33:56.500  INFO 19840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:33:56.508  INFO 19840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:33:56.508  INFO 19840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:33:56.619  INFO 19840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:33:56.619  INFO 19840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 920 ms
+2022-07-20 20:33:56.712  INFO 19840 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:33:56.804  INFO 19840 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:33:57.315  WARN 19840 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:33:57.315  INFO 19840 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:33:57.318  WARN 19840 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:33:57.318  INFO 19840 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:33:57.414  INFO 19840 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:33:57.442  INFO 19840 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-20 20:33:57.508  INFO 19840 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:33:57.916  INFO 19840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-20 20:33:57.925  INFO 19840 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-20 20:33:58.054  INFO 19840 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.207 seconds (JVM running for 3.786)
+2022-07-20 20:33:58.153  INFO 19840 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-20 20:33:58.164  INFO 19840 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-20 20:33:58.168  INFO 19840 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@73da303e
+2022-07-20 20:34:09.681  INFO 19840 --- [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 20:34:09.681  INFO 19840 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 20:34:09.687  INFO 19840 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-20 20:34:10.029 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:34:10.046 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:34:10.065 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:34:10.069 DEBUG 19840 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:34:10.094  WARN 19840 --- [http-nio-8081-exec-5] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:34:10.098 ERROR 19840 --- [http-nio-8081-exec-5] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:37.676  WARN 19840 --- [http-nio-8081-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 87616
+2022-07-20 20:35:37.698 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:37.698 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:37.700 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:37.701 DEBUG 19840 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:37.701  WARN 19840 --- [http-nio-8081-exec-5] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:37.701 ERROR 19840 --- [http-nio-8081-exec-5] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:38.358 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:38.358 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:38.360 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:38.360 DEBUG 19840 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:38.361  WARN 19840 --- [http-nio-8081-exec-7] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:38.361 ERROR 19840 --- [http-nio-8081-exec-7] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:38.723 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:38.724 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:38.725 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:38.725 DEBUG 19840 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:38.726  WARN 19840 --- [http-nio-8081-exec-9] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:38.726 ERROR 19840 --- [http-nio-8081-exec-9] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:38.926 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:38.927 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:38.928 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:38.928 DEBUG 19840 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:38.929  WARN 19840 --- [http-nio-8081-exec-1] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:38.929 ERROR 19840 --- [http-nio-8081-exec-1] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:40.474 DEBUG 19840 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:40.475 DEBUG 19840 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:40.477 DEBUG 19840 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:40.478 DEBUG 19840 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:40.478  WARN 19840 --- [http-nio-8081-exec-3] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:40.478 ERROR 19840 --- [http-nio-8081-exec-3] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:40.663 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:40.663 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:40.665 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:40.665 DEBUG 19840 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:40.665  WARN 19840 --- [http-nio-8081-exec-4] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:40.665 ERROR 19840 --- [http-nio-8081-exec-4] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:45.065 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:45.065 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:45.067 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:45.068 DEBUG 19840 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:45.069  WARN 19840 --- [http-nio-8081-exec-10] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:45.069 ERROR 19840 --- [http-nio-8081-exec-10] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:45.403 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:45.403 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:45.405 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:45.405 DEBUG 19840 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:45.405  WARN 19840 --- [http-nio-8081-exec-1] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:45.406 ERROR 19840 --- [http-nio-8081-exec-1] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:45.663 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:45.664 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:45.665 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:45.666 DEBUG 19840 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:45.666  WARN 19840 --- [http-nio-8081-exec-2] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:45.667 ERROR 19840 --- [http-nio-8081-exec-2] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:45.835 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:45.836 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:45.837 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:45.837 DEBUG 19840 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:45.838  WARN 19840 --- [http-nio-8081-exec-4] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:45.838 ERROR 19840 --- [http-nio-8081-exec-4] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:45.996 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:45.996 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:45.998 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:45.999 DEBUG 19840 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.000  WARN 19840 --- [http-nio-8081-exec-6] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.000 ERROR 19840 --- [http-nio-8081-exec-6] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:46.172 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:46.172 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:46.173 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:46.173 DEBUG 19840 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.174  WARN 19840 --- [http-nio-8081-exec-5] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.174 ERROR 19840 --- [http-nio-8081-exec-5] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:46.346 DEBUG 19840 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:46.346 DEBUG 19840 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:46.347 DEBUG 19840 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:46.348 DEBUG 19840 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.348  WARN 19840 --- [http-nio-8081-exec-8] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.348 ERROR 19840 --- [http-nio-8081-exec-8] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:46.515 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:46.516 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:46.517 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:46.517 DEBUG 19840 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.518  WARN 19840 --- [http-nio-8081-exec-7] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.518 ERROR 19840 --- [http-nio-8081-exec-7] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:46.695 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:46.695 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:46.698 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:46.699 DEBUG 19840 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.699  WARN 19840 --- [http-nio-8081-exec-9] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.699 ERROR 19840 --- [http-nio-8081-exec-9] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:46.834 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:46.835 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:46.836 DEBUG 19840 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:46.837 DEBUG 19840 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:46.837  WARN 19840 --- [http-nio-8081-exec-10] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:46.837 ERROR 19840 --- [http-nio-8081-exec-10] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:47.005 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:47.005 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:47.006 DEBUG 19840 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:47.007 DEBUG 19840 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:47.007  WARN 19840 --- [http-nio-8081-exec-2] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:47.008 ERROR 19840 --- [http-nio-8081-exec-2] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:53.327 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:53.328 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:53.329 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:53.330 DEBUG 19840 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:53.331  WARN 19840 --- [http-nio-8081-exec-9] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:53.331 ERROR 19840 --- [http-nio-8081-exec-9] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:57.469 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:57.469 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:57.470 DEBUG 19840 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:57.471 DEBUG 19840 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:57.471  WARN 19840 --- [http-nio-8081-exec-4] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:57.471 ERROR 19840 --- [http-nio-8081-exec-4] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:35:57.677 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:35:57.677 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:35:57.679 DEBUG 19840 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:35:57.679 DEBUG 19840 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:35:57.679  WARN 19840 --- [http-nio-8081-exec-6] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:35:57.680 ERROR 19840 --- [http-nio-8081-exec-6] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:36:07.979 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:07.980 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:07.981 DEBUG 19840 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:07.981 DEBUG 19840 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:08.339 DEBUG 19840 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (356ms)
+2022-07-20 20:36:09.868 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:09.868 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:09.869 DEBUG 19840 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:09.870 DEBUG 19840 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:09.875 DEBUG 19840 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-20 20:36:10.255 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:10.256 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:10.257 DEBUG 19840 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:10.257 DEBUG 19840 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:10.262 DEBUG 19840 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (5ms)
+2022-07-20 20:36:16.981 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:16.982 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:16.982 DEBUG 19840 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:16.983 DEBUG 19840 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:16.989 DEBUG 19840 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (5ms)
+2022-07-20 20:36:23.447  INFO 19840 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-20 20:36:23.448  WARN 19840 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-20 20:36:23.448  WARN 19840 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-20 20:36:23.448  WARN 19840 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-20 20:36:23.448  WARN 19840 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-20 20:36:23.485  INFO 19840 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:36:23.486  INFO 19840 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-20 20:36:23.490  INFO 19840 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-20 20:36:29.499  WARN 19840 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-20 20:36:29.500  INFO 19840 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:36:29.512  INFO 19840 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:36:29.514  INFO 19840 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-20 20:36:32.986  INFO 12656 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-20 20:36:33.475  INFO 12656 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e5111f92-6d40-37f8-ad01-54790c051ef6
+2022-07-20 20:36:33.611  INFO 12656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:36:33.614  INFO 12656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-20 20:36:33.808  INFO 12656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-20 20:36:33.815  INFO 12656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 20:36:33.816  INFO 12656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-20 20:36:33.927  INFO 12656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 20:36:33.928  INFO 12656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 929 ms
+2022-07-20 20:36:34.020  INFO 12656 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-20 20:36:34.106  INFO 12656 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-20 20:36:34.622  WARN 12656 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:36:34.622  INFO 12656 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:36:34.625  WARN 12656 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-20 20:36:34.625  INFO 12656 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-20 20:36:34.720  INFO 12656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:36:34.748  INFO 12656 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-20 20:36:34.816  INFO 12656 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:36:35.238  INFO 12656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-20 20:36:35.250  INFO 12656 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-20 20:36:35.387  INFO 12656 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.216 seconds (JVM running for 3.779)
+2022-07-20 20:36:35.480  INFO 12656 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-20 20:36:35.490  INFO 12656 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-20 20:36:35.525  INFO 12656 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[192.168.202.1:8082],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.202.1:8082;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@294ebe11
+2022-07-20 20:36:41.209  INFO 12656 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 20:36:41.209  INFO 12656 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 20:36:41.213  INFO 12656 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-20 20:36:41.496 DEBUG 12656 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:41.512 DEBUG 12656 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:41.530 DEBUG 12656 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:41.534 DEBUG 12656 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:41.594 DEBUG 12656 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (58ms)
+2022-07-20 20:36:44.563 DEBUG 12656 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:44.564 DEBUG 12656 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:44.565 DEBUG 12656 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:44.566 DEBUG 12656 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:44.571 DEBUG 12656 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (5ms)
+2022-07-20 20:36:44.996 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:36:44.997 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:36:44.999 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:36:45.000 DEBUG 12656 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:36:45.004 DEBUG 12656 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-20 20:39:18.606  WARN 12656 --- [http-nio-8081-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 153594
+2022-07-20 20:39:18.627 DEBUG 12656 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:39:18.628 DEBUG 12656 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:39:18.629 DEBUG 12656 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:39:18.630 DEBUG 12656 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:39:18.630  WARN 12656 --- [http-nio-8081-exec-1] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:39:18.632 ERROR 12656 --- [http-nio-8081-exec-1] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:39:30.211 DEBUG 12656 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:39:30.211 DEBUG 12656 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:39:30.213 DEBUG 12656 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:39:30.214 DEBUG 12656 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:39:30.214  WARN 12656 --- [http-nio-8081-exec-4] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:39:30.214 ERROR 12656 --- [http-nio-8081-exec-4] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:39:30.726 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-20 20:39:30.727 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-20 20:39:30.729 DEBUG 12656 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-20 20:39:30.729 DEBUG 12656 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-20 20:39:30.729  WARN 12656 --- [http-nio-8081-exec-6] c.alibaba.cloud.nacos.ribbon.NacosRule   : no instance in service userservice
+2022-07-20 20:39:30.730 ERROR 12656 --- [http-nio-8081-exec-6] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！com.netflix.client.ClientException: Load balancer does not have available server for client: userservice
+2022-07-20 20:41:09.206  WARN 12656 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-20 20:41:09.206  WARN 12656 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-20 20:41:09.206  INFO 12656 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-20 20:41:09.206  WARN 12656 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-20 20:41:09.207  WARN 12656 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-20 20:41:09.242  INFO 12656 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-20 20:41:09.243  INFO 12656 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-20 20:41:09.247  INFO 12656 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-20 20:41:15.256  WARN 12656 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-20 20:41:15.257  INFO 12656 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:41:15.275  INFO 12656 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-20 20:41:15.277  INFO 12656 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
