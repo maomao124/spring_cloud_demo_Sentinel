@@ -1,2 +1,3 @@
-H:\程序\大三暑假\spring_cloud_demo_Gateway\feign_api\src\main\java\mao\feign\entity\User.java
-H:\程序\大三暑假\spring_cloud_demo_Gateway\feign_api\src\main\java\mao\feign\feign\UserClient.java
+H:\程序\大三暑假\spring_cloud_demo_Sentinel\feign_api\src\main\java\mao\feign\fallback\UserClientFallbackFactory.java
+H:\程序\大三暑假\spring_cloud_demo_Sentinel\feign_api\src\main\java\mao\feign\entity\User.java
+H:\程序\大三暑假\spring_cloud_demo_Sentinel\feign_api\src\main\java\mao\feign\feign\UserClient.java

@@ -126,3 +126,7 @@ feign:
         # 失败重试机制，请求失败的重试机制，默认是没有，不过会使用Ribbon的重试
         #retryer:
 
+  # 开启Feign的Sentinel功能
+  sentinel:
+    enabled: true
+

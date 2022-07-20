@@ -1,2 +1,4 @@
-mao\feign\entity\User.class
+mao\feign\fallback\UserClientFallbackFactory$1.class
 mao\feign\feign\UserClient.class
+mao\feign\entity\User.class
+mao\feign\fallback\UserClientFallbackFactory.class
