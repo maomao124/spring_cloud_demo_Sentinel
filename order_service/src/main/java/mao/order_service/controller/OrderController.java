@@ -1,5 +1,6 @@
 package mao.order_service.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import mao.order_service.entity.Order;
 import mao.order_service.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,7 @@ public class OrderController
      * @param orderId 订单的id
      * @return Order
      */
+    @SentinelResource("order_hot")
     @GetMapping("{orderId}")
     public Order queryOrderByUserId(@PathVariable("orderId") Long orderId)
     {
