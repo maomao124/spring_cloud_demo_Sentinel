@@ -50,3 +50,39 @@
 2022-07-22 13:28:26.404  INFO 3316 --- [http-nio-8082-exec-3] m.u.controller.UserController            : 请求头key1：null
 2022-07-22 13:28:26.555  INFO 3316 --- [http-nio-8082-exec-4] m.u.controller.UserController            : 请求头key1：null
 2022-07-22 13:28:26.735  INFO 3316 --- [http-nio-8082-exec-5] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 13:49:34.990  INFO 3316 --- [http-nio-8082-exec-7] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 13:49:34.992  WARN 3316 --- [http-nio-8082-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_user, version : 1.2.8, lastPacketReceivedIdleMillis : 1268255
+2022-07-22 13:50:28.052  INFO 3316 --- [http-nio-8082-exec-8] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 13:50:40.673  INFO 3316 --- [http-nio-8082-exec-9] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 13:50:51.373  INFO 3316 --- [http-nio-8082-exec-10] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 13:50:56.164  INFO 3316 --- [http-nio-8082-exec-1] m.u.controller.UserController            : 请求头key1：null
+2022-07-22 14:00:31.886  WARN 3316 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-22 14:00:31.886  WARN 3316 --- [Thread-12] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-22 14:00:31.887  WARN 3316 --- [Thread-12] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-22 14:00:31.887  WARN 3316 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-22 14:00:31.913  INFO 3316 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-22 14:00:31.915  INFO 3316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-22 14:00:31.915  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@userservice:192.168.202.1:8082 from beat map.
+2022-07-22 14:00:31.915  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@userservice with instance: Instance{instanceId='null', ip='192.168.202.1', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HZ', serviceName='null', metadata={}}
+2022-07-22 14:00:31.917  INFO 3316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-22 14:00:31.917  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-07-22 14:00:32.922  INFO 3316 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@userservice\",\"name\":\"DEFAULT_GROUP@@userservice\",\"cacheMillis\":10000,\"lastRefTime\":1658469632921,\"checksum\":\"0c7e40e1d9840d17856de7ee303a37df\",\"useSpecifiedURL\":false,\"clusters\":\"HZ\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":92760467377800} from /172.20.112.1
+2022-07-22 14:00:32.923  INFO 3316 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@userservice@@HZ -> [{"instanceId":"192.168.202.1#8082#HZ#DEFAULT_GROUP@@userservice","ip":"192.168.202.1","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HZ","serviceName":"DEFAULT_GROUP@@userservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-07-22 14:00:32.929  INFO 3316 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@userservice@@HZ -> []
+2022-07-22 14:00:34.941  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-07-22 14:00:34.941  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-07-22 14:00:36.078  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-07-22 14:00:39.099  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-07-22 14:00:39.099  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-07-22 14:00:39.099  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-07-22 14:00:39.100  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-07-22 14:00:39.100  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-07-22 14:00:39.100  WARN 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-07-22 14:00:39.100  WARN 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-07-22 14:00:39.100  INFO 3316 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-07-22 14:00:39.100  INFO 3316 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-07-22 14:00:39.100  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-07-22 14:00:39.101  WARN 3316 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-22 14:00:39.101  INFO 3316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-22 14:00:39.103  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-22 14:00:39.106  INFO 3316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
