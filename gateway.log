@@ -1,68 +1,34 @@
-2022-07-20 12:42:40.810  INFO 16288 --- [main] mao.gateway.GatewayApplication           : No active profile set, falling back to default profiles: default
-2022-07-20 12:42:41.396  INFO 16288 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=caa3fa00-cde1-3661-a5d4-ab37c6ed3e1c
-2022-07-20 12:42:41.415  INFO 16288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:42:41.417  INFO 16288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:42:41.423  INFO 16288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:42:41.552  WARN 16288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-20 12:42:41.553  INFO 16288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-20 12:42:41.558  WARN 16288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-20 12:42:41.558  INFO 16288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-20 12:42:42.427  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2022-07-20 12:42:42.428  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2022-07-20 12:42:42.428  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2022-07-20 12:42:42.428  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2022-07-20 12:42:42.428  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2022-07-20 12:42:42.428  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2022-07-20 12:42:42.429  INFO 16288 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2022-07-20 12:42:42.612  INFO 16288 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-20 12:42:43.211  INFO 16288 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 10010
-2022-07-20 12:42:43.607  INFO 16288 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.202.1:10010 register finished
-2022-07-20 12:42:43.621  INFO 16288 --- [main] mao.gateway.GatewayApplication           : Started GatewayApplication in 3.796 seconds (JVM running for 7.223)
-2022-07-20 12:42:58.821  WARN 16288 --- [Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-20 12:42:58.821  WARN 16288 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-20 12:42:58.821  WARN 16288 --- [Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-20 12:42:58.822  WARN 16288 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-20 12:42:58.826  INFO 16288 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-20 12:42:58.827  INFO 16288 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-20 12:42:58.832  INFO 16288 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-20 12:43:04.874  WARN 16288 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
-2022-07-20 12:43:11.622  INFO 16372 --- [main] mao.gateway.GatewayApplication           : No active profile set, falling back to default profiles: default
-2022-07-20 12:43:12.131  INFO 16372 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=caa3fa00-cde1-3661-a5d4-ab37c6ed3e1c
-2022-07-20 12:43:12.149  INFO 16372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:43:12.151  INFO 16372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:43:12.162  INFO 16372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-20 12:43:12.259  WARN 16372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-20 12:43:12.260  INFO 16372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-20 12:43:12.262  WARN 16372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-20 12:43:12.262  INFO 16372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-20 12:43:12.897  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2022-07-20 12:43:12.898  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2022-07-20 12:43:12.899  INFO 16372 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2022-07-20 12:43:13.033  INFO 16372 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-20 12:43:13.527  INFO 16372 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 10010
-2022-07-20 12:43:13.732  INFO 16372 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.202.1:10010 register finished
-2022-07-20 12:43:13.748  INFO 16372 --- [main] mao.gateway.GatewayApplication           : Started GatewayApplication in 3.068 seconds (JVM running for 3.855)
-2022-07-20 14:08:54.472  WARN 16372 --- [Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-20 14:08:54.472  WARN 16372 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-20 14:08:54.475  WARN 16372 --- [Thread-10] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-20 14:08:54.476  WARN 16372 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-20 14:08:54.494  INFO 16372 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-20 14:08:54.499  INFO 16372 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-20 14:08:54.504  INFO 16372 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-20 14:09:00.558  WARN 16372 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-22 13:18:42.007  INFO 8656 --- [main] mao.gateway.GatewayApplication           : No active profile set, falling back to default profiles: default
+2022-07-22 13:18:42.458  INFO 8656 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=caa3fa00-cde1-3661-a5d4-ab37c6ed3e1c
+2022-07-22 13:18:42.474  INFO 8656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-22 13:18:42.482  INFO 8656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-22 13:18:42.486  INFO 8656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-22 13:18:42.575  WARN 8656 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-22 13:18:42.576  INFO 8656 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 13:18:42.579  WARN 8656 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-22 13:18:42.579  INFO 8656 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-22 13:18:43.154  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2022-07-22 13:18:43.154  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2022-07-22 13:18:43.154  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2022-07-22 13:18:43.155  INFO 8656 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-07-22 13:18:43.270  INFO 8656 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-22 13:18:43.992  INFO 8656 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 10010
+2022-07-22 13:18:44.371  INFO 8656 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP gateway 192.168.202.1:10010 register finished
+2022-07-22 13:18:44.392  INFO 8656 --- [main] mao.gateway.GatewayApplication           : Started GatewayApplication in 3.261 seconds (JVM running for 3.831)
+2022-07-22 13:27:38.409  INFO 8656 --- [reactor-http-nio-16] c.netflix.config.ChainedDynamicProperty  : Flipping property: orderservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-22 13:27:38.428  INFO 8656 --- [reactor-http-nio-16] c.netflix.loadbalancer.BaseLoadBalancer  : Client: orderservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=orderservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-22 13:27:38.438  INFO 8656 --- [reactor-http-nio-16] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-22 13:27:38.466  INFO 8656 --- [reactor-http-nio-16] c.netflix.config.ChainedDynamicProperty  : Flipping property: orderservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-22 13:27:38.470  INFO 8656 --- [reactor-http-nio-16] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client orderservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=orderservice,current list of Servers=[192.168.202.1:8081],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.202.1:8081;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@503e7283
+2022-07-22 13:27:39.447  INFO 8656 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: orderservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
