@@ -1,189 +1,230 @@
-2022-07-22 13:19:56.008  INFO 20588 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
-2022-07-22 13:19:56.692  INFO 20588 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f63225a5-9718-3e4a-802f-e3592eb2096a
-2022-07-22 13:19:56.874  INFO 20588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-22 13:19:56.877  INFO 20588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-22 13:19:57.127  INFO 20588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-07-22 13:19:57.137  INFO 20588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-22 13:19:57.138  INFO 20588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-22 13:19:57.292  INFO 20588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-22 13:19:57.293  INFO 20588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
-2022-07-22 13:19:57.437  INFO 20588 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-22 13:19:57.569  INFO 20588 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-22 13:19:58.240  WARN 20588 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-22 13:19:58.241  INFO 20588 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-22 13:19:58.244  WARN 20588 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-22 13:19:58.244  INFO 20588 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-22 13:19:58.345  INFO 20588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-22 13:19:58.374  INFO 20588 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2022-07-22 13:19:58.449  INFO 20588 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-22 13:19:58.897  INFO 20588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-07-22 13:19:58.907  INFO 20588 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
-2022-07-22 13:19:59.018  INFO 20588 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.814 seconds (JVM running for 4.533)
-2022-07-22 13:19:59.122  INFO 20588 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2022-07-22 13:19:59.133  INFO 20588 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2022-07-22 13:19:59.140  INFO 20588 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@570ed9c
-2022-07-22 13:20:52.631  INFO 20588 --- [http-nio-8081-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-22 13:20:52.631  INFO 20588 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-22 13:20:52.638  INFO 20588 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2022-07-22 13:20:53.045 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:20:53.067 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:20:53.101 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:20:53.105 DEBUG 20588 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:20:53.618 DEBUG 20588 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (511ms)
-2022-07-22 13:27:38.563  WARN 20588 --- [http-nio-8081-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 405466
-2022-07-22 13:27:38.595 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:27:38.596 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:27:38.597 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:27:38.598 DEBUG 20588 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:27:38.755 DEBUG 20588 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (156ms)
-2022-07-22 13:28:24.633 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:24.634 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:24.635 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:24.635 DEBUG 20588 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:24.643 DEBUG 20588 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (7ms)
-2022-07-22 13:28:25.002 DEBUG 20588 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.002 DEBUG 20588 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.003 DEBUG 20588 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.004 DEBUG 20588 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:25.008 DEBUG 20588 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:28:25.208 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.209 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.210 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.210 DEBUG 20588 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:25.214 DEBUG 20588 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
-2022-07-22 13:28:25.401 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.401 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.403 DEBUG 20588 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.403 DEBUG 20588 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:25.517 DEBUG 20588 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (113ms)
-2022-07-22 13:28:25.612 DEBUG 20588 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.612 DEBUG 20588 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.614 DEBUG 20588 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.615 DEBUG 20588 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:25.619 DEBUG 20588 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:28:25.740 DEBUG 20588 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.740 DEBUG 20588 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.741 DEBUG 20588 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.742 DEBUG 20588 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:25.747 DEBUG 20588 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:28:25.908 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:25.908 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:25.910 DEBUG 20588 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:25.910 DEBUG 20588 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.025 DEBUG 20588 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (114ms)
-2022-07-22 13:28:26.107 DEBUG 20588 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:26.107 DEBUG 20588 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:26.108 DEBUG 20588 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:26.109 DEBUG 20588 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.113 DEBUG 20588 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:28:26.240 DEBUG 20588 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:26.240 DEBUG 20588 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:26.241 DEBUG 20588 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:26.242 DEBUG 20588 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.354 DEBUG 20588 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (111ms)
-2022-07-22 13:28:26.401 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:26.401 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:26.402 DEBUG 20588 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:26.403 DEBUG 20588 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.407 DEBUG 20588 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
-2022-07-22 13:28:26.551 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:26.552 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:26.553 DEBUG 20588 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:26.553 DEBUG 20588 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.557 DEBUG 20588 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
-2022-07-22 13:28:26.731 DEBUG 20588 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:28:26.731 DEBUG 20588 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:28:26.733 DEBUG 20588 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:28:26.733 DEBUG 20588 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:28:26.738 DEBUG 20588 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:46:41.987  WARN 20588 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-22 13:46:41.987  WARN 20588 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-22 13:46:41.987  INFO 20588 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
-2022-07-22 13:46:41.987  WARN 20588 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-22 13:46:41.987  WARN 20588 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-22 13:46:42.021  INFO 20588 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-22 13:46:42.022  INFO 20588 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-22 13:46:42.025  INFO 20588 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-22 13:46:48.031  WARN 20588 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
-2022-07-22 13:46:48.032  INFO 20588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-22 13:46:48.048  INFO 20588 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-22 13:46:48.049  INFO 20588 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-07-22 13:46:53.212  INFO 11908 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
-2022-07-22 13:46:53.725  INFO 11908 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af8cc406-f9df-36be-a250-b74dc2aea9eb
-2022-07-22 13:46:53.860  INFO 11908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-22 13:46:53.862  INFO 11908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-22 13:46:54.049  INFO 11908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-07-22 13:46:54.058  INFO 11908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-22 13:46:54.058  INFO 11908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-22 13:46:54.172  INFO 11908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-22 13:46:54.173  INFO 11908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 948 ms
-2022-07-22 13:46:54.269  INFO 11908 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-22 13:46:54.357  INFO 11908 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-22 13:46:54.872  WARN 11908 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-22 13:46:54.872  INFO 11908 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-22 13:46:54.875  WARN 11908 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-22 13:46:54.875  INFO 11908 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-22 13:46:54.979  INFO 11908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-22 13:46:55.005  INFO 11908 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2022-07-22 13:46:55.071  INFO 11908 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-22 13:46:55.469  INFO 11908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-07-22 13:46:55.477  INFO 11908 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
-2022-07-22 13:46:55.578  INFO 11908 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.19 seconds (JVM running for 3.78)
-2022-07-22 13:46:55.685  INFO 11908 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2022-07-22 13:46:55.696  INFO 11908 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2022-07-22 13:46:55.724  INFO 11908 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[192.168.202.1:8082],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+2022-07-23 15:32:59.483  INFO 12032 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-23 15:33:00.075  INFO 12032 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af8cc406-f9df-36be-a250-b74dc2aea9eb
+2022-07-23 15:33:00.282  INFO 12032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-23 15:33:00.284  INFO 12032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-23 15:33:00.518  INFO 12032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-23 15:33:00.528  INFO 12032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-23 15:33:00.529  INFO 12032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-23 15:33:00.657  INFO 12032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-23 15:33:00.657  INFO 12032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1151 ms
+2022-07-23 15:33:00.772  INFO 12032 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-23 15:33:00.899  INFO 12032 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-23 15:33:01.520  WARN 12032 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-23 15:33:01.520  INFO 12032 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 15:33:01.524  WARN 12032 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-23 15:33:01.524  INFO 12032 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 15:33:01.634  INFO 12032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 15:33:01.671  INFO 12032 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-23 15:33:01.733  INFO 12032 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-23 15:33:02.081  WARN 12032 --- [main] c.a.c.s.d.converter.SentinelConverter    : converter can not convert rules because source is empty
+2022-07-23 15:33:02.242  INFO 12032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 15:33:02.250  INFO 12032 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-23 15:33:02.360  INFO 12032 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.708 seconds (JVM running for 4.274)
+2022-07-23 15:33:02.455  INFO 12032 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-23 15:33:02.467  INFO 12032 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-23 15:33:02.473  INFO 12032 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@6f65a203
+2022-07-23 15:34:11.332  INFO 12032 --- [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-23 15:34:11.332  INFO 12032 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-23 15:34:11.337  INFO 12032 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-23 15:34:11.646 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:34:11.663 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:34:11.706 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:34:11.710 DEBUG 12032 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:34:12.133 DEBUG 12032 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (420ms)
+2022-07-23 15:35:16.544  WARN 12032 --- [http-nio-8081-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 64845
+2022-07-23 15:35:16.564 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:35:16.565 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:35:16.566 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:35:16.567 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:35:16.602 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (34ms)
+2022-07-23 15:45:44.964  WARN 12032 --- [http-nio-8081-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 628397
+2022-07-23 15:45:44.983 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:44.983 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:44.984 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:44.985 DEBUG 12032 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:45.011 DEBUG 12032 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (26ms)
+2022-07-23 15:45:45.210 DEBUG 12032 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:45.210 DEBUG 12032 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:45.211 DEBUG 12032 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:45.212 DEBUG 12032 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:45.216 DEBUG 12032 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:45:45.533 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:45.533 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:45.534 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:45.534 DEBUG 12032 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:45.538 DEBUG 12032 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:45:45.737 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:45.738 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:45.740 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:45.740 DEBUG 12032 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:45.744 DEBUG 12032 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:45:45.890 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:45.890 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:45.892 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:45.892 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:45.999 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (107ms)
+2022-07-23 15:45:46.070 DEBUG 12032 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:46.070 DEBUG 12032 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:46.071 DEBUG 12032 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:46.072 DEBUG 12032 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:46.077 DEBUG 12032 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:45:46.189 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:46.190 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:46.191 DEBUG 12032 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:46.191 DEBUG 12032 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:46.195 DEBUG 12032 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:45:46.352 DEBUG 12032 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:46.353 DEBUG 12032 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:46.354 DEBUG 12032 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:46.355 DEBUG 12032 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:46.472 DEBUG 12032 --- [http-nio-8081-exec-7] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (116ms)
+2022-07-23 15:45:46.546 DEBUG 12032 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:46.546 DEBUG 12032 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:46.548 DEBUG 12032 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:46.548 DEBUG 12032 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:46.554 DEBUG 12032 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:45:46.692 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:46.692 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:46.693 DEBUG 12032 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:46.694 DEBUG 12032 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:46.698 DEBUG 12032 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:45:47.002 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:47.002 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:47.004 DEBUG 12032 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:47.004 DEBUG 12032 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:47.123 DEBUG 12032 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (118ms)
+2022-07-23 15:45:47.216 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:47.216 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:47.217 DEBUG 12032 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:47.218 DEBUG 12032 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:47.223 DEBUG 12032 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:45:47.443 DEBUG 12032 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:47.444 DEBUG 12032 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:47.445 DEBUG 12032 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:47.445 DEBUG 12032 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:47.449 DEBUG 12032 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:45:47.703 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:45:47.703 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:45:47.706 DEBUG 12032 --- [http-nio-8081-exec-3] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:45:47.707 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:45:47.712 DEBUG 12032 --- [http-nio-8081-exec-3] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:46:56.559  WARN 12032 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-23 15:46:56.559  INFO 12032 --- [Thread-21] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-23 15:46:56.559  WARN 12032 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-23 15:46:56.560  WARN 12032 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-23 15:46:56.560  WARN 12032 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-23 15:46:56.592  INFO 12032 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-23 15:46:56.593  INFO 12032 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-23 15:46:56.596  INFO 12032 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-23 15:47:02.613  WARN 12032 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-23 15:47:02.613  INFO 12032 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-23 15:47:02.625  INFO 12032 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-23 15:47:02.627  INFO 12032 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-23 15:47:06.162  INFO 19316 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-23 15:47:06.685  INFO 19316 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=af8cc406-f9df-36be-a250-b74dc2aea9eb
+2022-07-23 15:47:06.833  INFO 19316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-23 15:47:06.835  INFO 19316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-23 15:47:07.025  INFO 19316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-23 15:47:07.033  INFO 19316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-23 15:47:07.033  INFO 19316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-23 15:47:07.148  INFO 19316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-23 15:47:07.149  INFO 19316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 973 ms
+2022-07-23 15:47:07.243  INFO 19316 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-23 15:47:07.332  INFO 19316 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-23 15:47:07.833  WARN 19316 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-23 15:47:07.834  INFO 19316 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 15:47:07.836  WARN 19316 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-23 15:47:07.837  INFO 19316 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-23 15:47:07.940  INFO 19316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 15:47:07.973  INFO 19316 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-07-23 15:47:08.038  INFO 19316 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-23 15:47:08.484  INFO 19316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 15:47:08.491  INFO 19316 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-23 15:47:08.602  INFO 19316 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 3.255 seconds (JVM running for 3.833)
+2022-07-23 15:47:08.691  INFO 19316 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-23 15:47:08.701  INFO 19316 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-23 15:47:08.730  INFO 19316 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[192.168.202.1:8082],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
 },Server stats: [[Server:192.168.202.1:8082;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@48aa0813
-2022-07-22 13:49:34.619  INFO 11908 --- [http-nio-8081-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-22 13:49:34.620  INFO 11908 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-22 13:49:34.624  INFO 11908 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-07-22 13:49:34.904 DEBUG 11908 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:49:34.920 DEBUG 11908 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:49:34.938 DEBUG 11908 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:49:34.942 DEBUG 11908 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:49:35.026 DEBUG 11908 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (82ms)
-2022-07-22 13:50:28.046 DEBUG 11908 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:50:28.046 DEBUG 11908 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:50:28.048 DEBUG 11908 --- [http-nio-8081-exec-10] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:50:28.048 DEBUG 11908 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:50:28.055 DEBUG 11908 --- [http-nio-8081-exec-10] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (6ms)
-2022-07-22 13:50:40.668 DEBUG 11908 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:50:40.668 DEBUG 11908 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:50:40.670 DEBUG 11908 --- [http-nio-8081-exec-4] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:50:40.670 DEBUG 11908 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:50:40.789 DEBUG 11908 --- [http-nio-8081-exec-4] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (118ms)
-2022-07-22 13:50:51.368 DEBUG 11908 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:50:51.368 DEBUG 11908 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:50:51.370 DEBUG 11908 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:50:51.370 DEBUG 11908 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:50:51.375 DEBUG 11908 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
-2022-07-22 13:50:56.159 DEBUG 11908 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:50:56.160 DEBUG 11908 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:50:56.161 DEBUG 11908 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:50:56.161 DEBUG 11908 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
-2022-07-22 13:50:56.167 DEBUG 11908 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (5ms)
-2022-07-22 13:52:51.895 ERROR 11908 --- [http-nio-8081-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.reflect.UndeclaredThrowableException] with root cause
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@26bce60d
+2022-07-23 15:47:41.081  INFO 19316 --- [http-nio-8081-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-23 15:47:41.081  INFO 19316 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-23 15:47:41.086  INFO 19316 --- [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-23 15:47:41.343 DEBUG 19316 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:47:41.360 DEBUG 19316 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:47:41.380 DEBUG 19316 --- [http-nio-8081-exec-9] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:47:41.384 DEBUG 19316 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:47:41.464 DEBUG 19316 --- [http-nio-8081-exec-9] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (78ms)
+2022-07-23 15:47:43.444 DEBUG 19316 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:47:43.444 DEBUG 19316 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:47:43.446 DEBUG 19316 --- [http-nio-8081-exec-2] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:47:43.446 DEBUG 19316 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:47:43.450 DEBUG 19316 --- [http-nio-8081-exec-2] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:47:46.344 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:47:46.345 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:47:46.346 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:47:46.346 DEBUG 19316 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:47:46.351 DEBUG 19316 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (4ms)
+2022-07-23 15:47:47.025 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:47:47.025 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:47:47.027 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:47:47.027 DEBUG 19316 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:47:47.031 DEBUG 19316 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:48:57.444  WARN 19316 --- [http-nio-8081-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 70411
+2022-07-23 15:48:57.465 DEBUG 19316 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:48:57.465 DEBUG 19316 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:48:57.466 DEBUG 19316 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:48:57.467 DEBUG 19316 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:48:57.490 DEBUG 19316 --- [http-nio-8081-exec-8] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (22ms)
+2022-07-23 15:48:58.121 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:48:58.122 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:48:58.123 DEBUG 19316 --- [http-nio-8081-exec-1] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:48:58.123 DEBUG 19316 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:48:58.128 DEBUG 19316 --- [http-nio-8081-exec-1] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 15:48:59.079 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-23 15:48:59.079 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-23 15:48:59.080 DEBUG 19316 --- [http-nio-8081-exec-6] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-23 15:48:59.080 DEBUG 19316 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-23 15:48:59.084 DEBUG 19316 --- [http-nio-8081-exec-6] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (3ms)
+2022-07-23 16:07:10.874  WARN 19316 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-23 16:07:10.875  WARN 19316 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-23 16:07:10.875  INFO 19316 --- [Thread-21] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-23 16:07:10.875  WARN 19316 --- [Thread-16] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-23 16:07:10.875  WARN 19316 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-23 16:07:10.906  INFO 19316 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-23 16:07:10.907  INFO 19316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-23 16:07:10.912 ERROR 19316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='orderservice', weight=1.0, clusterName='HZ', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.202.1', networkInterface='', port=8081, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null, failFast=true}},
 
-com.alibaba.csp.sentinel.slots.block.flow.param.ParamFlowException: 101
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused: no further information
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:271) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:252) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:238) ~[nacos-client-1.4.2.jar:na]
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:106) ~[spring-cloud-starter-alibaba-nacos-discovery-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) ~[spring-cloud-commons-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:183) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:949) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
 
-2022-07-22 13:54:34.533  WARN 11908 --- [http-nio-8081-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/cloud_order, version : 1.2.8, lastPacketReceivedIdleMillis : 218367
-2022-07-22 13:54:34.554 DEBUG 11908 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:54:34.554 DEBUG 11908 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:54:34.555 DEBUG 11908 --- [http-nio-8081-exec-8] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:54:34.556 ERROR 11908 --- [http-nio-8081-exec-8] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！1
-2022-07-22 13:54:52.245 DEBUG 11908 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
-2022-07-22 13:54:52.245 DEBUG 11908 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
-2022-07-22 13:54:52.246 DEBUG 11908 --- [http-nio-8081-exec-7] m.o.mapper.OrderMapper.findById          : <==      Total: 1
-2022-07-22 13:54:52.247 ERROR 11908 --- [http-nio-8081-exec-7] m.f.fallback.UserClientFallbackFactory   : 查询用户失败！1
-2022-07-22 14:00:31.854  WARN 11908 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-22 14:00:31.854  WARN 11908 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-22 14:00:31.854  INFO 11908 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
-2022-07-22 14:00:31.855  WARN 11908 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-22 14:00:31.855  WARN 11908 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-22 14:00:31.884  INFO 11908 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-22 14:00:31.885  INFO 11908 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-22 14:00:31.888  INFO 11908 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-22 14:00:37.907  WARN 11908 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
-2022-07-22 14:00:37.908  INFO 11908 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-22 14:00:37.925  INFO 11908 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-22 14:00:37.927  INFO 11908 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-23 16:07:10.913  INFO 19316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-23 16:07:16.917  WARN 19316 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-23 16:07:16.917  INFO 19316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-23 16:07:16.931  INFO 19316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-23 16:07:16.933  INFO 19316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

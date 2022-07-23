@@ -42,6 +42,17 @@ spring:
         dashboard: localhost:8099
       # 关闭context整合
       web-context-unify: false
+      # 配置sentinel持久化
+      datasource:
+        flow:
+          # 使用nacos 持久化
+          nacos:
+            # nacos地址
+            server-addr: localhost:8848
+            dataId: orderservice-flow-rules
+            groupId: SENTINEL_GROUP
+            # flow、 degrade、authority、param-flow
+            rule-type: flow
 
 
 
